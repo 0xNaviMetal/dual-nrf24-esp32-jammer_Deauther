@@ -4,11 +4,12 @@
     "apps/*"
   ],
   "resolutions": {
-    "react-native": "patch:react-native@npm%3A0.81.4#~/.yarn/patches/react-native+0.81.4.patch",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-native-screens": "4.16.0"
-  },
+  "react-native": "patch:react-native@npm%3A0.81.4#~/.yarn/patches/react-native+0.81.4.patch",
+  "react": "19.1.0",
+  "react-dom": "19.1.0",
+  "react-native-screens": "4.16.0",
+  "@react-native-community/netinfo": "patch:@react-native-community/netinfo@npm%3A11.4.1#~/.yarn/patches/@react-native-community+netinfo+11.4.1.patch"
+},
   "devDependencies": {
     "eslint": "^9.27.0",
     "oxfmt": "^0.35.0",
