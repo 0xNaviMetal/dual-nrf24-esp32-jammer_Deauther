@@ -118,15 +118,16 @@
     "tailwindcss-animate": "1.0.7",
     "typescript": "~5.9.2"
   },
-  "overrides": {
-    "@react-navigation/bottom-tabs": "7.4.8",
-    "@react-navigation/core": "7.12.4",
-    "@react-navigation/elements": "2.6.5",
-    "@react-navigation/native": "7.2.2",
-    "@react-navigation/native-stack": "7.3.27",
-    "@react-navigation/routers": "7.5.1",
-    "@react-navigation/stack": "7.4.7"
-  },
+ "resolutions": {
+  "@react-native-community/netinfo": "patch:@react-native-community/netinfo@npm%3A11.4.1#~/.yarn/patches/@react-native-community+netinfo+11.4.1.patch",
+  "@react-navigation/bottom-tabs": "7.4.8",
+  "@react-navigation/core": "7.12.4",
+  "@react-navigation/elements": "2.6.5",
+  "@react-navigation/native": "7.2.2",
+  "@react-navigation/native-stack": "7.3.27",
+  "@react-navigation/routers": "7.5.1",
+  "@react-navigation/stack": "7.4.7"
+},
   "jest": {
     "preset": "jest-expo"
   }
