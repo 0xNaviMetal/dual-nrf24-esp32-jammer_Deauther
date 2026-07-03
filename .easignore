@@ -1,0 +1,41 @@
+# Applied when EAS bundles the workspace root for an iOS build of apps/mobile
+# (see apps/flux/core/src/services/interactive-terminal/create-shell.ts).
+# Keep yarn-workspace context (root package.json, yarn.lock, .yarnrc.yml,
+# .yarn/patches/) and apps/mobile/ — exclude everything else so EAS uploads
+# stay small.
+
+node_modules/
+**/node_modules/
+.yarn/cache/
+.yarn/install-state.gz
+.yarn/unplugged/
+
+apps/web/
+
+config/
+shared/
+# Re-include the metro polyfills directory: `shared/` above is unanchored and
+# would otherwise match `apps/mobile/polyfills/shared/`, which holds the
+# expo-image and empty-component shims that metro.config.js redirects to via
+# SHARED_ALIASES. Without these files in the EAS upload, EAGER_BUNDLE fails
+# with `Unable to resolve module expo-image` on every file that imports it.
+!apps/mobile/polyfills/shared/
+examples/
+playwright-report/
+test-results/
+caches/
+
+Dockerfile
+docker-compose.test.yml
+README.md
+.dockerignore
+.eslintignore
+.gitignore
+.oxfmtrc.json
+.oxlintrc.json
+
+*.log
+*.tgz
+.env
+.env.*
+.DS_Store
